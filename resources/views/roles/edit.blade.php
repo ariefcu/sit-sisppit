@@ -45,5 +45,5 @@
     </div>
     {!! Form::close() !!}
     @endsection
-    <p class="text-center text-primary"><small>Tutorial by LaravelTuts.com</small></p>
+    <p class="text-center text-primary"><small>SISPPIT</small></p>
     
