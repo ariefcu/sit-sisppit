@@ -28,4 +28,5 @@
         </div>
     </div>
 </div>
+<p class="text-center text-primary"><small>SISPPIT</small></p>
 @endsection

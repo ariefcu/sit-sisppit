@@ -5,17 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Santri extends Model
+class Keperluan extends Model
 {
     use HasFactory;
+
     protected $guarded = ['id'];
 
-    public function santri_user()
-    {
-        return $this->belongsTo(User::class);
-    }
-
-    public function santri_izin()
+    public function keperluan_izin()
     {
         return $this->hasMany(Izin::class);
     }
