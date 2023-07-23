@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Add New Izin</h2>
+                <h2>Pilih Santri</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('izins.index') }}">Back</a>
@@ -24,9 +24,12 @@
         <tr>
             <th>No</th>
             <th>Nama Santri</th>
-            <th>Kelas</th>
-            <th>Kelas Paralel</th>
-            <th>Nomor Sakan</th>
+            {{-- <th>Kelas</th> --}}
+            <th>Kls</th>
+            {{-- <th>Kelas Paralel</th> --}}
+            <th>Kls Prll</th>
+            {{-- <th>Nomor Sakan</th> --}}
+            <th>Skn</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($santris as $santri)

@@ -22,16 +22,19 @@
     <tr>
         <th>No</th>
         <th>Nama Santri</th>
-        <th>Kelas</th>
-        <th>Kelas Paralel</th>
-        <th>Nomor Sakan</th>
-        <th>Tanggal Keluar</th>
+        {{-- <th>Kelas</th> --}}
+        <th>Kls</th>
+        {{-- <th>Kelas Paralel</th> --}}
+        <th>Kls Prll</th>
+        {{-- <th>Nomor Sakan</th> --}}
+        <th>Sakan</th>
+        {{-- <th>Tanggal Keluar</th>
         <th>Tanggal Masuk</th>
         <th>Nama Penjemput</th>
         <th>Hubungan Keluarga</th>
         <th>Nomor Hp Penjemput</th>
         <th>Keperluan Izin</th>
-        <th>Status Izin</th>
+        <th>Status Izin</th> --}}
         <th width="280px">Action</th>
     </tr>
     @foreach ($approvals as $approval)
@@ -41,18 +44,18 @@
         <td>{{ $approval->kelas }}</td>
         <td>{{ $approval->kelas_paralel }}</td>
         <td>{{ $approval->nomor_sakan }}</td>
-        <td>{{ $approval->tanggal_keluar }}</td>
+        {{-- <td>{{ $approval->tanggal_keluar }}</td>
         <td>{{ $approval->tanggal_masuk }}</td>
         <td>{{ $approval->nama_penjemput }}</td>
         <td>{{ $approval->hubungan_keluarga }}</td>
         <td>{{ $approval->nomor_hp_penjemput }}</td>
         <td>{{ $approval->keperluan }}</td>
-        <td>{{ $approval->status_izin }}</td>
+        <td>{{ $approval->status_izin }}</td> --}}
         <td>
             <form action="{{ route('approvals.destroy',$approval->id) }}" method="POST">
                 <a class="btn btn-info" href="{{ route('approvals.show', $approval->id) }}">Show</a>
                 @can('approval-edit')
-                <a class="btn btn-primary" href="{{ route('approvals.edit', $approval->id) }}">Edit</a>
+                <a class="btn btn-primary" href="{{ route('approvals.edit', $approval->id) }}">Approve</a>
                 @endcan
                 @csrf
                 @method('DELETE')

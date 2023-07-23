@@ -84,7 +84,6 @@ class IzinController extends Controller
     */
     public function show(Izin $izin)
     {
-        var_dump($izin);
         return view('izins.show', compact('izin'));
     }
 
